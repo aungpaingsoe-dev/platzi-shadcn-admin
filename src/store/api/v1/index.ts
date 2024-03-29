@@ -5,5 +5,5 @@ export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://contact.sankyitar.store/api/v1",
   }),
-  endpoints: (buider) => ({}),
+  endpoints: () => ({}),
 });

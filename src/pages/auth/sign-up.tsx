@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Formik, Form, ErrorMessage } from "formik";
 import { SignUpType } from "@/types";
 import { signUpSchema } from "@/services/schemas";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSignUpMutation } from "@/store/api/v1/endpoints/auth";
 import { ReloadIcon } from "@radix-ui/react-icons";
 
