@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+  .contact {
+    @apply w-8/12 h-[600px] mx-auto mt-16 flex justify-center items-center;
+  }
+}
