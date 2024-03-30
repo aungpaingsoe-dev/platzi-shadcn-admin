@@ -11,7 +11,7 @@ const initialState: InitialStateType = {
   token: "",
 };
 
-const { saveData } = useCookieStorage();
+const { saveData, removeData } = useCookieStorage();
 
 export const authSlice = createSlice({
   name: "auth",
@@ -22,11 +22,17 @@ export const authSlice = createSlice({
       state.user = user;
       state.token = token;
       saveData("token", token);
-      saveData("user",user);
+      saveData("user", user);
     },
+    removeUserInfo: (state : InitialStateType) => {
+      state.user = null,
+      state.token = "",
+      removeData("user");
+      removeData("token");
+    }
   },
 });
 
 export const token = (state: InitialStateType) => state.token;
-export const { saveUserInfo } = authSlice.actions;
+export const { saveUserInfo, removeUserInfo } = authSlice.actions;
 export default authSlice.reducer;

@@ -1,9 +1,9 @@
 import React from "react";
-import NotFoundJson from "@/lottie/Network.json";
+import NetworkError from "@/lottie/NetworkError.json";
 import Lottie from "lottie-react";
 
 const NetworkErrorComponent: React.FC = () => {
-  return <Lottie animationData={NotFoundJson} loop={true} />;
+  return <Lottie animationData={NetworkError} loop={true} />;
 };
 
 export default NetworkErrorComponent;

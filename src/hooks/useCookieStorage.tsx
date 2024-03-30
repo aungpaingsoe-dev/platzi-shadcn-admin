@@ -6,13 +6,8 @@ const useCookieStorage = () => {
     return data ? JSON.parse(data) : null;
   };
 
-  const saveData = (
-    key: string,
-    initialValue: any,
-    expires?: 7,
-    path?: string
-  ) => {
-    setCookie(key, JSON.stringify(initialValue), { expires, path });
+  const saveData = (key: string, initialValue: any) => {
+    setCookie(key, JSON.stringify(initialValue), { expires: 7, path: "/" });
   };
 
   const removeData = (key: string) => {
