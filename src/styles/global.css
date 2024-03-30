@@ -1,12 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply font-sans;
+  }
 }
 
 @layer components {
   .contact {
     @apply w-8/12 h-[600px] mx-auto mt-16 flex justify-center items-center;
+  }
+}
+
+@layer utilities {
+  .toast-top-left {
+    @apply fixed top-2 left-2 z-[100] md:max-w-[420px];
   }
 }

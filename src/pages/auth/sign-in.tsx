@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -14,10 +14,16 @@ import { Formik, Form, ErrorMessage } from "formik";
 import { SignInType } from "@/types";
 import { signInSchema } from "@/services/schemas";
 import { useSignInMutation } from "@/store/api/v1/endpoints/auth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useToast } from "@/components/ui/use-toast";
+import { useDispatch } from "react-redux";
+import { saveUserInfo } from "@/store/slice/auth";
 
 const SignInPage: React.FC = () => {
-  const [signIn] = useSignInMutation();
+  const [signIn, data] = useSignInMutation();
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const dispatch = useDispatch();
 
   const initialValues: SignInType = {
     email: "",
@@ -29,13 +35,34 @@ const SignInPage: React.FC = () => {
     action.resetForm();
   };
 
+  useEffect(() => {
+    const isSuccess = data?.data?.success;
+    if (isSuccess) {
+      dispatch(
+        saveUserInfo({
+          user: data?.data?.user,
+          token: data?.data?.token,
+        })
+      );
+      navigate("/");
+    }
+    // Toast
+    if (data?.data) {
+      toast({
+        variant: `${isSuccess ? "default" : "destructive"}`,
+        title: `${isSuccess ? "Success" : "Error"}`,
+        description: `${data?.data?.message}`,
+      });
+    }
+  }, [data]);
+
   return (
     <div className=" w-3/5 mx-auto h-screen flex justify-center items-center">
       <Card className=" basis-2/4 ">
         <CardHeader className=" w-full flex flex-row justify-between items-center ">
           <CardTitle>Sign In</CardTitle>
-          <CardDescription className=" text-primary ">
-            <Link to="/sign-up">I don't have an account</Link>
+          <CardDescription>
+            <Link to="/auth/sign-up">I don't have an account</Link>
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -55,7 +82,7 @@ const SignInPage: React.FC = () => {
                     value={values.email}
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    placeholder="Enter your email"
+                    placeholder="Enter your email address"
                   />
                   <ErrorMessage
                     name="email"
@@ -85,7 +112,7 @@ const SignInPage: React.FC = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className=" w-full bg-primary "
+                  className=" w-full "
                 >
                   {isSubmitting && (
                     <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />

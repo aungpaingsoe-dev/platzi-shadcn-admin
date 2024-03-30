@@ -40,8 +40,8 @@ const SignUpPage: React.FC = () => {
       <Card className=" basis-2/4 ">
         <CardHeader className=" w-full flex flex-row justify-between items-center ">
           <CardTitle>Sign Up</CardTitle>
-          <CardDescription className=" text-primary ">
-            <Link to="/sign-in">I already have account</Link>
+          <CardDescription>
+            <Link to="/auth/sign-in">I already have account</Link>
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -129,7 +129,7 @@ const SignUpPage: React.FC = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className=" w-full bg-primary "
+                  className=" w-full "
                 >
                   {isSubmitting && (
                     <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />

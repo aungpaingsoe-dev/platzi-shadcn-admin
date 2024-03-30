@@ -16,10 +16,15 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ['"Jost"', "sans-serif"],
+    },
     extend: {
       colors: {
-        "primary" : "#FC6736",
-        "danger"  : "#FF204E"
+        "primary" : "#5396fb",
+        "secondary" : "#8fd8fc",
+        "danger"  : "#FF204E",
+        "dark"    : "#222831"
       },
       keyframes: {
         "accordion-down": {
