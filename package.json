@@ -17,6 +17,7 @@
         "@radix-ui/react-slot": "^1.0.2",
         "@radix-ui/react-toast": "^1.1.5",
         "@reduxjs/toolkit": "^2.2.2",
+        "@tanstack/react-table": "^8.15.3",
         "autoprefixer": "^10.4.19",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",

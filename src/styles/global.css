@@ -11,8 +11,8 @@
 }
 
 @layer components {
-  .contact {
-    @apply w-8/12 h-[600px] mx-auto mt-16 flex justify-center items-center;
+  .content {
+    @apply w-10/12 mx-auto mt-16 ;
   }
 }
 

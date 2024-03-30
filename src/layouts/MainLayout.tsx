@@ -6,7 +6,7 @@ const MainLayout: React.FC = () => {
   return (
     <AuthGuardComponent>
       <HeaderComponent />
-      <div className="contact">
+      <div className="content">
         <Outlet />
       </div>
     </AuthGuardComponent>
