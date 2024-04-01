@@ -19,7 +19,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { useDispatch } from "react-redux";
 import { saveUserInfo } from "@/store/slice/auth";
 
-const SignInPage: React.FC = () => {
+const SignIn: React.FC = () => {
   const [signIn, data] = useSignInMutation();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -128,4 +128,4 @@ const SignInPage: React.FC = () => {
   );
 };
 
-export default SignInPage;
+export default SignIn;

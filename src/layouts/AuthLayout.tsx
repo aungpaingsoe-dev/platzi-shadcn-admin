@@ -1,12 +1,12 @@
-import { AuthGuardComponent } from "@/components";
+import { AuthGuard } from "@/components";
 import React from "react";
 import { Outlet } from "react-router-dom";
 
 const AuthLayout: React.FC = () => {
   return (
-    <AuthGuardComponent>
+    <AuthGuard>
       <Outlet />
-    </AuthGuardComponent>
+    </AuthGuard>
   );
 };
 

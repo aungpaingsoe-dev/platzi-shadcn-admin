@@ -1,15 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { AuthGuardComponent, HeaderComponent } from "@/components";
+import { AuthGuard, Header } from "@/components";
 
 const MainLayout: React.FC = () => {
   return (
-    <AuthGuardComponent>
-      <HeaderComponent />
+    <AuthGuard>
+      <Header />
       <div className="content">
         <Outlet />
       </div>
-    </AuthGuardComponent>
+    </AuthGuard>
   );
 };
 

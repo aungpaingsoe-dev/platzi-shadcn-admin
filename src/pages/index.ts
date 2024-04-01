@@ -1,4 +1,3 @@
-export { default as SignInPage } from "./auth/sign-in";
-export { default as SignUpPage } from "./auth/sign-up";
-export { default as HomePage } from "./home";
-export { default as ContactPage } from "./contact";
+export { default as SignIn } from "./auth/sign-in";
+export { default as SignUp } from "./auth/sign-up";
+export { default as Home } from "./home";

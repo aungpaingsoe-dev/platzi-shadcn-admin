@@ -16,7 +16,7 @@ import { Link } from "react-router-dom";
 import { useSignUpMutation } from "@/store/api/v1/endpoints/auth";
 import { ReloadIcon } from "@radix-ui/react-icons";
 
-const SignUpPage: React.FC = () => {
+const SignUp: React.FC = () => {
   const [singUp, data] = useSignUpMutation();
 
   const initialValues: SignUpType = {
@@ -145,4 +145,4 @@ const SignUpPage: React.FC = () => {
   );
 };
 
-export default SignUpPage;
+export default SignUp;

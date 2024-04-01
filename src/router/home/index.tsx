@@ -1,17 +1,17 @@
-import { ErrorBoundaryComponent } from "@/components";
+import { ErrorBoundary } from "@/components";
 import { MainLayout } from "@/layouts";
-import { HomePage } from "@/pages";
+import { Home } from "@/pages";
 import { RouteObject } from "react-router-dom";
 
 const HomeRoutes: RouteObject[] = [
   {
     path: "/",
     element: <MainLayout />,
-    errorElement: <ErrorBoundaryComponent />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         path: "",
-        element: <HomePage />,
+        element: <Home />,
       },
     ],
   },

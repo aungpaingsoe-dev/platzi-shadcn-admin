@@ -1,8 +1,11 @@
 import React from "react";
-import { Navigate } from "react-router";
 
-const HomePage: React.FC = () => {
-  return <Navigate to="/contact" />;
+const Home: React.FC = () => {
+  return (
+    <div>
+
+    </div>
+  )
 };
 
-export default HomePage;
+export default Home;
