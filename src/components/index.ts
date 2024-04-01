@@ -1,9 +1,9 @@
 export { default as Header } from "@/components/common/Header";
-// Error Components
-export { default as ErrorBoundary } from "@/components/error/error-boundary";
+export { default as InputPassword } from "@/components/custom/input-password";
 // Guard Components
 export { default as AuthGuard } from "@/components/guard/auth-guard";
 // Error Components
+export { default as ErrorBoundary } from "@/components/error/error-boundary";
 export { default as GeneralError } from "@/components/error/general-error";
 export { default as PageNotFoundError } from "@/components/error/page-notfound";
 export { default as NetworkError } from "@/components/error/network-error";

@@ -18,6 +18,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@/components/ui/use-toast";
 import { useDispatch } from "react-redux";
 import { saveUserInfo } from "@/store/slice/auth";
+import { InputPassword } from "@/components";
 
 const SignIn: React.FC = () => {
   const [signIn, data] = useSignInMutation();
@@ -93,8 +94,7 @@ const SignIn: React.FC = () => {
 
                 <div className=" flex flex-col gap-2 ">
                   <Label htmlFor="password">Password</Label>
-                  <Input
-                    type="password"
+                  <InputPassword
                     name="password"
                     id="password"
                     value={values.password}
@@ -105,7 +105,7 @@ const SignIn: React.FC = () => {
                   <ErrorMessage
                     name="password"
                     component={"div"}
-                    className=" text-sm text-danger "
+                    className=" text-sm text-danger"
                   />
                 </div>
 
