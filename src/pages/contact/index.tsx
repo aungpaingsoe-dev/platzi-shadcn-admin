@@ -1,13 +1,15 @@
 import { useGetContactsQuery } from "@/store/api/v1/endpoints/contact";
-import DataTableTool from "./tools/DataTable";
 import React from "react";
 
 const ContactPage: React.FC = () => {
   const { data } = useGetContactsQuery({});
-  console.log(data?.contacts?.data);
+  console.log(data);
+  
   return (
     <div>
-      <DataTableTool apiData={data?.contacts?.data} />
+      <div className=" dark:bg-black dark:text-white" >
+        Hello World
+      </div>
     </div>
   );
 };

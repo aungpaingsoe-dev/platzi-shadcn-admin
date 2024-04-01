@@ -1,5 +1,6 @@
 import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ToggleMode } from "@/components";
 
 const HeaderComponent: React.FC = () => {
   return (
@@ -7,10 +8,7 @@ const HeaderComponent: React.FC = () => {
       <div className=" w-10/12 mx-auto flex items-center justify-between">
         <div className=" font-bold ">React Frame</div>
         <div>
-          <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>AP</AvatarFallback>
-          </Avatar>
+          <ToggleMode/>
         </div>
       </div>
     </div>

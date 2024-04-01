@@ -1,13 +1,16 @@
 import React from "react";
 import { RouterProvider } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
+import { ThemeProvider } from "@/services/providers/themes";
 import router from "@/router";
 
 const App: React.FC = () => {
   return (
     <>
-      <RouterProvider router={router}></RouterProvider>
-      <Toaster />
+      <ThemeProvider>
+        <RouterProvider router={router}></RouterProvider>
+        <Toaster />
+      </ThemeProvider>
     </>
   );
 };
