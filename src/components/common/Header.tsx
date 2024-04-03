@@ -1,17 +1,30 @@
 import React from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ToggleMode } from "@/components";
+import { SheetSideBar, ToggleMode } from "@/components";
+import { Input } from "@/components/ui/input";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Menu2 } from "tabler-icons-react";
+import { Button } from "@/components/ui/button";
+import { useDispatch, useSelector } from "react-redux";
+import { toggle } from "@/store/slice/sidebar";
 
-const HeaderComponent: React.FC = () => {
+const Header: React.FC = () => {
+  const dispatch = useDispatch();
+  const isSideBarOpen = useSelector((state: any) => state.sidebar.isOpen);
+
   return (
-    <div className=" w-screen h-14 bg-white flex items-center border-b top-0 fixed ">
-      <div className=" w-10/12 mx-auto flex items-center justify-between">
-        <div className=" font-bold ">React Frame</div>
-        <div className=" flex ">
-        <ToggleMode/>
+    <div className=" w-full h-14 py-3 flex justify-between items-center gap-2 ">
+      <Button variant="link" size="icon" onClick={() => dispatch(toggle())}>
+        <Menu2 size={22}  strokeWidth={2} />
+      </Button>
+      <SheetSideBar isOpen={isSideBarOpen} />
+      <div className=" basis-3/12 ">
+        <Input placeholder="Search..." />
+      </div>
+      <div className=" basis-9/12 ">
+        <div className=" flex justify-end items-center gap-3 ">
+          <ToggleMode />
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>AP</AvatarFallback>
+            <AvatarFallback>APS</AvatarFallback>
           </Avatar>
         </div>
       </div>
@@ -19,4 +32,4 @@ const HeaderComponent: React.FC = () => {
   );
 };
 
-export default HeaderComponent;
+export default Header;

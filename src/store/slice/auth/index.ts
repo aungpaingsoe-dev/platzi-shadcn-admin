@@ -24,15 +24,14 @@ export const authSlice = createSlice({
       saveData("token", token);
       saveData("user", user);
     },
-    removeUserInfo: (state : InitialStateType) => {
-      state.user = null,
-      state.token = "",
-      removeData("user");
+    removeUserInfo: (state: InitialStateType) => {
+      (state.user = null), (state.token = ""), removeData("user");
       removeData("token");
-    }
+    },
   },
 });
 
 export const token = (state: InitialStateType) => state.token;
+export const user = (state: InitialStateType) => state.user;
 export const { saveUserInfo, removeUserInfo } = authSlice.actions;
 export default authSlice.reducer;

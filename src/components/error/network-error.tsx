@@ -6,7 +6,7 @@ const NetworkError: React.FC = () => {
   return (
     <div className="h-svh">
       <div className="m-auto flex h-full w-full flex-col items-center justify-center">
-        <div className=" w-[300px] ">
+        <div className=" w-[250px] ">
           <NetworkErrorLottie />
         </div>
         <span className=" text-3xl font-bold mb-3 leading-tight ">

@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   body {
     @apply font-sans;
@@ -13,6 +14,14 @@
 @layer components {
   .content {
     @apply w-10/12 mx-auto mt-16 ;
+  }
+
+  .nav-link{
+    @apply flex items-center gap-2 text-sm px-4 py-3 m-[2px] rounded-md ;
+  }
+
+  .nav-active {
+    @apply bg-slate-100 ;
   }
 }
 

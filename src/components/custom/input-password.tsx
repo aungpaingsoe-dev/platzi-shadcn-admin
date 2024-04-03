@@ -11,9 +11,10 @@ interface PasswordInputProps {
   onBlur: (event: FocusEvent<HTMLInputElement>) => void;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
+  className? : string
 }
 
-const InputPassword: React.FC<PasswordInputProps> = (props: any) => {
+const InputPassword: React.FC<PasswordInputProps> = (props) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (

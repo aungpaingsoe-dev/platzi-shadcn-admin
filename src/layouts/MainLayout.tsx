@@ -1,13 +1,20 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { AuthGuard, Header } from "@/components";
+import { AuthGuard, Header, SideBar } from "@/components";
+import { useSelector } from "react-redux";
 
 const MainLayout: React.FC = () => {
+  const isSideBarOpen = useSelector((state: any) => state.sidebar.isOpen);
   return (
     <AuthGuard>
-      <Header />
-      <div className="content">
-        <Outlet />
+      <div className="flex">
+        <SideBar />
+        <main className={" w-full z-50 px-5 " + ( isSideBarOpen ? "ms-60" : "ms-14" )}>
+          <Header />
+          <div className=" mt-6 ">
+            <Outlet />
+          </div>
+        </main>
       </div>
     </AuthGuard>
   );

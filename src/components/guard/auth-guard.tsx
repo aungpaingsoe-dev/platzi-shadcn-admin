@@ -39,7 +39,7 @@ const AuthGuardComponent: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     checkAuth();
-  });
+  },[]);
 
   return <div>
     {

@@ -1,5 +1,9 @@
-export { default as Header } from "@/components/common/Header";
+// Custom
+export { default as Header } from "@/components/common/header";
 export { default as InputPassword } from "@/components/custom/input-password";
+// Common
+export { default as SideBar } from "@/components/common/sidebar";
+export { default as SheetSideBar } from "@/components/common/sheet-sidebar";
 // Guard Components
 export { default as AuthGuard } from "@/components/guard/auth-guard";
 // Error Components

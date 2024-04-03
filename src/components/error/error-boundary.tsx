@@ -20,7 +20,7 @@ const ErrorBoundaryComponent: React.FC = () => {
 
   }
 
-  return <Navigate to={"/error"}/>
+  return <GeneralError/>
 };
 
 export default ErrorBoundaryComponent;
