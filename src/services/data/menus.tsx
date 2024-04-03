@@ -1,11 +1,20 @@
 import {
   InfoCircle,
   Error404,
-  BarrierBlock,
   ServerOff,
   Home,
   Users,
   WifiOff,
+  Login,
+  UserPlus,
+  Shield,
+  Settings2,
+  Category2,
+  Package,
+  BuildingWarehouse,
+  BrandHipchat,
+  BoxOff,
+  Bandage
 } from "tabler-icons-react";
 
 interface MenuItem {
@@ -24,6 +33,41 @@ const menus: MenuItem[] = [
     isOpen: false,
   },
   {
+    icon: <Category2 size={18} strokeWidth={2} />,
+    title: "Categories",
+    link: "/",
+    isOpen: false,
+  },
+  {
+    icon: <Package size={18} strokeWidth={2} />,
+    title: "Products",
+    link: "/users",
+    children: [
+      {
+        title: "In Stock",
+        link: "/auth/sign-in",
+        icon: <BuildingWarehouse size={18} strokeWidth={2} />,
+      },
+      {
+        title: "Out Stock",
+        link: "/auth/sign-in",
+        icon: <BoxOff size={18} strokeWidth={2} />,
+      },
+      {
+        title: "Damages",
+        link: "/auth/sign-in",
+        icon: <Bandage size={18} strokeWidth={2} />,
+      },
+    ],
+    isOpen: false,
+  },
+  {
+    icon: <BrandHipchat size={18} strokeWidth={2} />,
+    title: "Chats",
+    link: "/",
+    isOpen: false,
+  },
+  {
     icon: <InfoCircle size={20} strokeWidth={2} />,
     title: "Error Pages",
     children: [
@@ -31,36 +75,48 @@ const menus: MenuItem[] = [
         title: "404 Not Found",
         link: "/404",
         icon: <Error404 size={18} strokeWidth={2} />,
-      },    
+      },
       {
         title: "General Error",
         link: "/error",
         icon: <ServerOff size={18} strokeWidth={2} />,
-      },    
+      },
       {
-        title : "Lose Connection",
-        link : "/network-error",
-        icon : <WifiOff size={18} strokeWidth={2} />
-      }
+        title: "Lose Connection",
+        link: "/network-error",
+        icon: <WifiOff size={18} strokeWidth={2} />,
+      },
     ],
     isOpen: false,
   },
   {
-    icon: <Users size={18} strokeWidth={2} />,
-    title: "Form Pages",
+    icon: <Shield size={18} strokeWidth={2} />,
+    title: "Auth Pages",
     link: "/users",
     children: [
       {
         title: "Sign In",
         link: "/auth/sign-in",
-        icon: <Error404 size={18} strokeWidth={2} />,
+        icon: <Login size={18} strokeWidth={2} />,
       },
       {
         title: "Sign Up",
         link: "/auth/sign-up",
-        icon: <Error404 size={18} strokeWidth={2} />,
+        icon: <UserPlus size={18} strokeWidth={2} />,
       },
     ],
+    isOpen: false,
+  },
+  {
+    icon: <Users size={18} strokeWidth={2} />,
+    title: "Users",
+    link: "/users",
+    isOpen: false,
+  },
+  {
+    icon: <Settings2 size={18} strokeWidth={2} />,
+    title: "Settings",
+    link: "/settings",
     isOpen: false,
   },
 ];

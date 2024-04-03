@@ -7,12 +7,7 @@ type InitialStateType = {
 
 const initialState: InitialStateType = {
   isSideBarOpen: true,
-  breadCrumbs: [
-    {
-      title: "Dashboard",
-      link: "/dashboard",
-    }
-  ],
+  breadCrumbs: [],
 };
 
 export const app = createSlice({
@@ -28,5 +23,5 @@ export const app = createSlice({
   },
 });
 
-export const { toggleSideBarOpen } = app.actions;
+export const { toggleSideBarOpen, setBreadCrumb } = app.actions;
 export default app.reducer;
