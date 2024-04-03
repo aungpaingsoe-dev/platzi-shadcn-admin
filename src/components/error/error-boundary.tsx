@@ -4,7 +4,7 @@ import { PageNotFoundError, GeneralError } from "@/components";
 
 const ErrorBoundaryComponent: React.FC = () => {
   const error = useRouteError();
-  
+
   if (isRouteErrorResponse(error)) {
     if (error.status === 404) {
       return <PageNotFoundError/>

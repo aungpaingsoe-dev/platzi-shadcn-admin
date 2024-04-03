@@ -4,7 +4,7 @@ import { AuthGuard, Header, SideBar } from "@/components";
 import { useSelector } from "react-redux";
 
 const MainLayout: React.FC = () => {
-  const isSideBarOpen = useSelector((state: any) => state.sidebar.isOpen);
+  const isSideBarOpen = useSelector((state: any) => state.app.isSideBarOpen);
   return (
     <AuthGuard>
       <div className="flex">

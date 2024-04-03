@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/services/providers/theme-provider";
 import router from "@/router";
 
 const App: React.FC = () => {
+
   return (
     <>
       <ThemeProvider>

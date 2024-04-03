@@ -1,32 +1,38 @@
 import React from "react";
-import { SheetSideBar, ToggleMode } from "@/components";
-import { Input } from "@/components/ui/input";
+import { BreadCrumb, ToggleMode } from "@/components";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Menu2 } from "tabler-icons-react";
+import { RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
 import { Button } from "@/components/ui/button";
 import { useDispatch, useSelector } from "react-redux";
-import { toggle } from "@/store/slice/sidebar";
+import { toggleSideBarOpen } from "@/store/slice/app";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
-  const isSideBarOpen = useSelector((state: any) => state.sidebar.isOpen);
+  const isSideBarOpen = useSelector((state: any) => state.app.isSideBarOpen);
 
   return (
-    <div className=" w-full h-14 py-3 flex justify-between items-center gap-2 ">
-      <Button variant="link" size="icon" onClick={() => dispatch(toggle())}>
-        <Menu2 size={22}  strokeWidth={2} />
-      </Button>
-      <SheetSideBar isOpen={isSideBarOpen} />
-      <div className=" basis-3/12 ">
-        <Input placeholder="Search..." />
+    <div className=" w-full h-14 py-3 flex justify-between items-center ">
+      <div className=" flex gap-2 items-center ">
+        <Button
+          variant="outline"
+          size="icon"
+          className=" rounded-full border-none shadow-none "
+          onClick={ () => dispatch( toggleSideBarOpen() ) }
+        >
+          {isSideBarOpen ? (
+            <RiMenuFoldLine className=" text-2xl" />
+          ) : (
+            <RiMenuUnfoldLine className=" text-2xl" />
+          )}
+        </Button>
+
+        <BreadCrumb />
       </div>
-      <div className=" basis-9/12 ">
-        <div className=" flex justify-end items-center gap-3 ">
-          <ToggleMode />
-          <Avatar>
-            <AvatarFallback>APS</AvatarFallback>
-          </Avatar>
-        </div>
+      <div className=" flex justify-end items-center gap-3 ">
+        <ToggleMode />
+        <Avatar>
+          <AvatarFallback>AP</AvatarFallback>
+        </Avatar>
       </div>
     </div>
   );
