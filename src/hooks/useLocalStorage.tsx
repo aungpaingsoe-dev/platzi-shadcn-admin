@@ -5,7 +5,7 @@ const useLocalStorage = () => {
   };
 
   const saveData = (key: string, initialValue: any) => {
-    localStorage.setItem(key, JSON.stringify(initialValue));
+    localStorage.setItem(key, initialValue);
   };
 
   const removeData = (key: string) => {

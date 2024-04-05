@@ -1,30 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { Sheet, SheetContent } from "@/components/ui/sidebar-sheet";
-import { Card } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import menusList from "@/services/data/menus";
-import { Apple, LetterI, ChevronUp, ChevronDown } from "tabler-icons-react";
-import { useNavigate } from "react-router";
+import { LetterI, ChevronUp, ChevronDown } from "tabler-icons-react";
+import { useLocation, useNavigate } from "react-router";
+import { SiPlatzi } from "react-icons/si";
 
 interface MenuItem {
   title: string;
   link?: string;
   icon?: JSX.Element;
   children?: MenuItem[];
-  isOpen?: boolean; // New property to track open/closed state
+  isOpen?: boolean;
 }
 
-interface SheetSideBarProps {
-  isSideBarOpen: boolean;
-}
-
-const SheetSideBar: React.FC<SheetSideBarProps> = ({ isSideBarOpen }) => {
+const SheetSideBar: React.FC = () => {
   const [menus, setMenus] = useState<MenuItem[]>(menusList);
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const handleOpenDropDownSideBar = (index: number) => {
     const updatedMenus = [...menus];
@@ -61,16 +58,16 @@ const SheetSideBar: React.FC<SheetSideBarProps> = ({ isSideBarOpen }) => {
   }, []);
 
   return (
-    <Sheet open={isSideBarOpen}>
-      <SheetContent
-        side={"left"}
-        className="w-60 shadow-none m-0 p-0 focus-visible:outline-none"
-      >
-        <Card className="w-full h-screen overflow-y-auto rounded-none shadow-none border-none">
-          <div className="border-b py-5 w-full">
+    <Card>
+      <CardContent className="w-60 shadow-none m-0 p-0 focus-visible:outline-none">
+        <div className="w-full h-screen overflow-y-auto rounded-none shadow-none border-none">
+          <div className="border-b py-5 w-full top-0 sticky bg-white shadow-sm ">
             <div className="px-4 flex items-center gap-2 text-lg">
-              <Apple size={20} strokeWidth={3} />
-              Shadcn Panel
+              <SiPlatzi className=" text-xl " />
+              Platzi + Shadcn Panel
+            </div>
+            <div className=" text-sm px-12 text-slate-500 ">
+              By Aung Paing Soe
             </div>
           </div>
 
@@ -111,7 +108,13 @@ const SheetSideBar: React.FC<SheetSideBarProps> = ({ isSideBarOpen }) => {
                     </CollapsibleContent>
                   </Collapsible>
                 ) : (
-                  <div className="nav-link hover:nav-active" onClick={() => handleNavigate(menu)}>
+                  <div
+                    className={
+                      "nav-link hover:nav-active " +
+                      (pathname == menu.link && "nav-active")
+                    }
+                    onClick={() => handleNavigate(menu)}
+                  >
                     {menu.icon && menu.icon}
                     {menu.title}
                   </div>
@@ -119,9 +122,9 @@ const SheetSideBar: React.FC<SheetSideBarProps> = ({ isSideBarOpen }) => {
               </React.Fragment>
             ))}
           </div>
-        </Card>
-      </SheetContent>
-    </Sheet>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 

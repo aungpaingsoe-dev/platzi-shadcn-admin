@@ -17,7 +17,7 @@ const Header: React.FC = () => {
           variant="outline"
           size="icon"
           className=" rounded-full border-none shadow-none "
-          onClick={ () => dispatch( toggleSideBarOpen() ) }
+          onClick={() => dispatch(toggleSideBarOpen())}
         >
           {isSideBarOpen ? (
             <RiMenuFoldLine className=" text-2xl" />

@@ -9,7 +9,7 @@ const MainLayout: React.FC = () => {
     <AuthGuard>
       <div className="flex">
         <SideBar />
-        <main className={" w-full z-50 px-5 " + ( isSideBarOpen ? "ms-60" : "ms-14" )}>
+        <main className={" w-full px-5 " + ( isSideBarOpen ? "ms-0" : "ms-14" )}>
           <Header />
           <div className=" mt-6 ">
             <Outlet />

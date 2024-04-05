@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Package2 } from "lucide-react";
+import { Category2, ReportMoney, Users   } from "tabler-icons-react"
 
 interface OverviewType {
   title: string;
@@ -21,19 +22,19 @@ const Overview: React.FC = () => {
       icon: <Package2 />,
     },
     {
-      title: "Total Orders",
+      title: "Total Categories",
       value: 40,
-      icon: <Package2 />,
+      icon: <Category2 />,
     },
     {
       title: "Total Incomes",
       value: "13004 $",
-      icon: <Package2 />,
+      icon: <ReportMoney />,
     },
     {
       title: "Total Users",
       value:  200,
-      icon: <Package2 />,
+      icon: <Users />,
     },
   ]);
 

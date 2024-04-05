@@ -3,6 +3,7 @@ export { default as InputPassword } from "@/components/custom/input-password";
 // Common
 export { default as SideBar } from "@/components/common/sidebar";
 export { default as SheetSideBar } from "@/components/common/sheet-sidebar";
+export { default as IconSideBar } from "@/components/common/icon-sidebar";
 export { default as Header } from "@/components/common/header";
 export { default as BreadCrumb } from "@/components/common/breadcrumb";
 // Guard Components

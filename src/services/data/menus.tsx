@@ -11,10 +11,7 @@ import {
   Settings2,
   Category2,
   Package,
-  BuildingWarehouse,
   BrandHipchat,
-  BoxOff,
-  Bandage
 } from "tabler-icons-react";
 
 interface MenuItem {
@@ -29,7 +26,7 @@ const menus: MenuItem[] = [
   {
     icon: <Home size={18} strokeWidth={2} />,
     title: "Dashboard",
-    link: "/",
+    link: "/dashboard",
     isOpen: false,
   },
   {
@@ -41,24 +38,7 @@ const menus: MenuItem[] = [
   {
     icon: <Package size={18} strokeWidth={2} />,
     title: "Products",
-    link: "/users",
-    children: [
-      {
-        title: "In Stock",
-        link: "/auth/sign-in",
-        icon: <BuildingWarehouse size={18} strokeWidth={2} />,
-      },
-      {
-        title: "Out Stock",
-        link: "/auth/sign-in",
-        icon: <BoxOff size={18} strokeWidth={2} />,
-      },
-      {
-        title: "Damages",
-        link: "/auth/sign-in",
-        icon: <Bandage size={18} strokeWidth={2} />,
-      },
-    ],
+    link: "/products",
     isOpen: false,
   },
   {

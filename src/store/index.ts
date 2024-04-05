@@ -1,13 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { api as v1 } from "./api/v1";
 import authReducer from "./slice/auth";
-import sideBarReducer from "./slice/sidebar";
 import appReducer from "./slice/app";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
-    sidebar: sideBarReducer,
     app: appReducer,
     [v1.reducerPath]: v1.reducer,
   },
