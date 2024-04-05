@@ -10,8 +10,7 @@ import {
   Shield,
   Settings2,
   Category2,
-  Package,
-  BrandHipchat,
+  Package
 } from "tabler-icons-react";
 
 interface MenuItem {
@@ -32,19 +31,13 @@ const menus: MenuItem[] = [
   {
     icon: <Category2 size={18} strokeWidth={2} />,
     title: "Categories",
-    link: "/",
+    link: "/categories",
     isOpen: false,
   },
   {
     icon: <Package size={18} strokeWidth={2} />,
     title: "Products",
     link: "/products",
-    isOpen: false,
-  },
-  {
-    icon: <BrandHipchat size={18} strokeWidth={2} />,
-    title: "Chats",
-    link: "/",
     isOpen: false,
   },
   {

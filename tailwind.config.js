@@ -21,10 +21,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        "primary" : "#5396fb",
-        "secondary" : "#8fd8fc",
-        "danger"  : "#FF204E",
-        "dark"    : "#222831"
+        "primary" : "var(--primary)",
+        "secondary" : "var(--secondary)",
+        "danger"  : "var(--danger)",
+        "background" : "var(--background)",
+        "foreground" : "var(--foreground)",
+        "dark" : "var(--dark)",
+        "light": "var(--light)"
       },
       keyframes: {
         "accordion-down": {

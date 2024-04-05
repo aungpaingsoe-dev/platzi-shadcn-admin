@@ -10,13 +10,11 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Link } from "react-router-dom";
@@ -25,7 +23,7 @@ const IconSidebar: React.FC = () => {
   const { pathname } = useLocation();
 
   return (
-    <Card className=" z-[2000] w-14 h-screen fixed top-0 start-0 flex justify-center overflow-y-auto rounded-none shadow-none border-top-none ">
+    <Card className=" z-[2000] w-14 h-screen fixed top-0 start-0 flex justify-center overflow-y-auto rounded-none ">
       <div className=" flex flex-col items-center ">
         <div className=" border-b py-5 w-full top-0 sticky ">
           <div className=" px-4 flex items-center gap-2 text-lg ">

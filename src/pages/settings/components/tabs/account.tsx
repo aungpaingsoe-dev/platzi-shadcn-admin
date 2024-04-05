@@ -14,17 +14,17 @@ const Account: React.FC = () => {
       <div className=" w-6/12 ">
         <div className=" flex flex-wrap ">
           <div className=" basis-1/2  p-1 ">
-            <Card>
+            <Card className=" dark:text-light dark:border-foreground ">
               <CardHeader>
                 <div className=" flex  justify-between ">
                   Username <User />
                 </div>
-                <div className=" text-slate-500 ">John</div>
+                <div className=" text-slate-500  ">John</div>
               </CardHeader>
             </Card>
           </div>
           <div className=" basis-1/2 p-1  ">
-            <Card>
+            <Card className=" dark:text-light dark:border-foreground ">
               <CardHeader>
                 <div className=" flex  justify-between ">
                   Username <Mail />
@@ -34,9 +34,9 @@ const Account: React.FC = () => {
             </Card>
           </div>
           <div className=" basis-1/2 p-1 ">
-            <Card>
+            <Card className=" dark:text-light dark:border-foreground ">
               <CardHeader>
-                <div className=" flex  justify-between ">
+                <div className=" flex justify-between ">
                   Role <UserCheck />
                 </div>
                 <div className=" text-slate-500 ">Admin</div>

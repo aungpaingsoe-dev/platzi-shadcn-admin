@@ -30,7 +30,7 @@ const Appearance: React.FC = () => {
               >
                 <div
                   className={`border-2 rounded-md p-2 ${
-                    theme === "light" ? "border-dark" : ""
+                    theme == "light" ? "border-dark dark:border-light" : "border-none"
                   }`}
                 >
                   <LightTheme />
@@ -46,7 +46,7 @@ const Appearance: React.FC = () => {
               >
                 <div
                   className={`border-2 rounded-md p-2 ${
-                    theme === "dark" ? "border-dark" : ""
+                    theme == "dark" ? "border-dark dark:border-light" : "border-none"
                   }`}
                 >
                   <DarkTheme />

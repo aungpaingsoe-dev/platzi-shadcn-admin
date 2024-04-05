@@ -58,20 +58,20 @@ const SheetSideBar: React.FC = () => {
   }, []);
 
   return (
-    <Card>
-      <CardContent className="w-60 shadow-none m-0 p-0 focus-visible:outline-none">
-        <div className="w-full h-screen overflow-y-auto rounded-none shadow-none border-none">
-          <div className="border-b py-5 w-full top-0 sticky bg-white shadow-sm ">
+    <Card className="w-60 fixed top-0 start-0 rounded-none overflow-y-auto ">
+      <CardContent className=" shadow-none m-0 p-0 focus-visible:outline-none">
+        <div className="w-full h-screen overflow-y-auto rounded-none shadow-none border-e dark:border-foreground ">
+          <div className="border-b dark:border-foreground dark:text-light py-5 w-full top-0 sticky shadow-sm ">
             <div className="px-4 flex items-center gap-2 text-lg">
               <SiPlatzi className=" text-xl " />
               Platzi + Shadcn Panel
             </div>
-            <div className=" text-sm px-12 text-slate-500 ">
+            <div className=" text-sm px-[44px] ">
               By Aung Paing Soe
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col dark:text-light">
             {menus?.map((menu, index) => (
               <React.Fragment key={index}>
                 {menu.children ? (

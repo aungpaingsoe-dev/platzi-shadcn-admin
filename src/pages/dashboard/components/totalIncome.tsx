@@ -64,7 +64,7 @@ const data = [
 
 const TotalIncome: React.FC = () => {
   return (
-    <Card>
+    <Card className=" dark:text-light dark:border-foreground ">
       <CardHeader>
         <div className="  ">
           Overview
@@ -88,13 +88,12 @@ const TotalIncome: React.FC = () => {
               axisLine={false}
               tickFormatter={(value) => `$${value}`}
             />
-            <Tooltip />
             <Legend />
             <Bar
               dataKey="total"
               fill="currentColor"
               radius={[4, 4, 0, 0]}
-              className="fill-primary"
+              className="dark:fill-light "
             />
           </BarChart>
         </ResponsiveContainer>

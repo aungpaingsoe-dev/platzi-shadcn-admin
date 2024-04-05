@@ -42,14 +42,14 @@ const Overview: React.FC = () => {
     <div className=" flex gap-3 ">
       {overViews?.map((overview, index) => (
         <div className=" basis-3/12 " key={index}>
-          <Card>
+          <Card className=" dark:text-light dark:border-foreground ">
             <CardHeader>
-              <CardTitle className=" flex items-center gap-2 opacity-70 font-normal ">
-                {overview.icon}
+              <CardTitle className=" flex items-center justify-between gap-2 opacity-70 font-normal ">
                 {overview.title}
+                {overview.icon}
               </CardTitle>
-              <CardDescription>
-                <div className=" text-2xl text-dark ">{overview.value}</div>
+              <CardDescription >
+                <div className=" text-2xl dark:text-light ">{overview.value}</div>
               </CardDescription>
             </CardHeader>
           </Card>

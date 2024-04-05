@@ -13,7 +13,7 @@ import products from "@/services/data/products";
 
 const TopProducts: React.FC = () => {
   return (
-    <Card>
+    <Card className=" dark:text-light dark:border-foreground ">
       <CardHeader>
         <div>Top Products</div>
       </CardHeader>

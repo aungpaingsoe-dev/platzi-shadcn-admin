@@ -4,24 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   body {
-    @apply font-sans;
-  }
-}
-
-@layer components {
-  .content {
-    @apply w-10/12 mx-auto mt-16 ;
+    @apply font-sans text-dark bg-light dark:text-light dark:bg-background;
   }
 
-  .nav-link{
-    @apply flex items-center gap-2 text-sm px-4 py-3 my-[2px] rounded-md cursor-pointer ;
+  :root {
+    --primary: #5396fb;
+    --secondary: #8fd8fc;
+    --danger: #ff204e;
+    --background: #020617;
+    --foreground: #64748b;
+    --dark: #020617;
+    --light: #ffff;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2 text-sm px-4 py-3 my-[2px] rounded-none cursor-pointer;
   }
 
   .nav-active {
-    @apply bg-slate-100 ;
+    @apply bg-slate-200 dark:bg-slate-800;
   }
 }
 

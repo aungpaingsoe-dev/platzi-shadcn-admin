@@ -1,20 +1,20 @@
 import { ErrorBoundary } from "@/components";
 import { MainLayout } from "@/layouts";
-import { Settings } from "@/pages";
+import { Products } from "@/pages";
 import { RouteObject } from "react-router-dom";
 
-const SettingRoutes: RouteObject[] = [
+const ProductRoutes: RouteObject[] = [
   {
-    path: "/settings",
+    path: "/products",
     element: <MainLayout />,
     errorElement: <ErrorBoundary />,
     children: [
       {
         path: "",
-        element: <Settings />,
+        element: <Products />,
       },
     ],
   },
 ];
 
-export default SettingRoutes;
+export default ProductRoutes;
