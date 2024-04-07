@@ -4,7 +4,7 @@ import { token } from "@/store/slice/auth";
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: import.meta.env.VITE_BASE_URL,
+    baseUrl: "https://api.escuelajs.co/api/v1",
     prepareHeaders: (headers) => {
       
       headers.set("Content-Type", "application/json");
