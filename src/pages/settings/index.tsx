@@ -25,13 +25,13 @@ const Settings: React.FC = () => {
     <div>
       <Tabs defaultValue="account">
         <TabsList>
-          <TabsTrigger value="account" className="w-[150px]">
+          <TabsTrigger value="account" className="lg:w-[150px] w-full">
             Account
           </TabsTrigger>
-          <TabsTrigger value="change-password" className="w-[150px]">
+          <TabsTrigger value="change-password" className="lg:w-[150px] w-full">
             Change Password
           </TabsTrigger>
-          <TabsTrigger value="apperance" className=" w-[150px] ">
+          <TabsTrigger value="apperance" className=" lg:w-[150px] w-full ">
             Apperance
           </TabsTrigger>
         </TabsList>

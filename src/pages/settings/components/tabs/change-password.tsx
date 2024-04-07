@@ -24,7 +24,7 @@ const ChangePassword: React.FC = () => {
         new one.
       </div>
       <hr className=" my-4 " />
-      <div className=" w-5/12 ">
+      <div className=" lg:w-5/12 ">
         <Formik
           initialValues={initialValues}
           validationSchema={ChangePasswordSchema}

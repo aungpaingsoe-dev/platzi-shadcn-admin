@@ -1,15 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import useLocalStorage from "@/hooks/useLocalStorage";
 
-type InitialStateType = {
+export interface InitialStateType {
   isSideBarOpen: boolean;
   breadCrumbs: Object[];
-};
+}
 
 const { saveData, getData } = useLocalStorage();
 
 const initialState: InitialStateType = {
-  isSideBarOpen: getData("side-bar-status") == null ? true : getData("side-bar-status"),
+  isSideBarOpen:
+    getData("side-bar-status") == null ? true : getData("side-bar-status"),
   breadCrumbs: [],
 };
 
@@ -27,5 +28,6 @@ export const app = createSlice({
   },
 });
 
-export const { toggleSideBarOpen, setBreadCrumb } = app.actions;
+export const { toggleSideBarOpen, setBreadCrumb } =
+  app.actions;
 export default app.reducer;

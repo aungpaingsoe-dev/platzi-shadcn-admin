@@ -7,12 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Package2 } from "lucide-react";
 import { Category2, ReportMoney, Users   } from "tabler-icons-react"
-
-interface OverviewType {
-  title: string;
-  value: string | number;
-  icon?: JSX.Element;
-}
+import { OverviewType } from "@/types";
 
 const Overview: React.FC = () => {
   const [overViews] = useState<OverviewType[]>([
@@ -39,7 +34,7 @@ const Overview: React.FC = () => {
   ]);
 
   return (
-    <div className=" flex gap-3 ">
+    <div className=" flex flex-col lg:flex-row gap-3 ">
       {overViews?.map((overview, index) => (
         <div className=" basis-3/12 " key={index}>
           <Card className=" dark:text-light dark:border-foreground ">

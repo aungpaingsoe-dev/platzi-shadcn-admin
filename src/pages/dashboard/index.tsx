@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <Overview />
-      <div className=" flex mt-6 gap-3 ">
+      <div className=" flex flex-col lg:flex-row mt-6 gap-3 ">
         <div className=" basis-6/12 ">
           <TotalIncome />
         </div>

@@ -1,18 +1,11 @@
-import { SignInType, SignUpType } from "@/types";
 import { api } from "..";
+import { SignInType } from "@/types";
 
 const authEndPoint = api.injectEndpoints({
   endpoints: (builder) => ({
     signIn: builder.mutation({
       query: (body: SignInType) => ({
-        url: "/login",
-        method: "POST",
-        body,
-      }),
-    }),
-    signUp: builder.mutation({
-      query: (body: SignUpType) => ({
-        url: "/register",
+        url: "/auth/login",
         method: "POST",
         body,
       }),
@@ -20,4 +13,4 @@ const authEndPoint = api.injectEndpoints({
   }),
 });
 
-export const { useSignInMutation, useSignUpMutation } = authEndPoint;
+export const { useSignInMutation } = authEndPoint;

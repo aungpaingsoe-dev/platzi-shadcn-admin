@@ -5,9 +5,9 @@ import {
   Home,
   Users,
   WifiOff,
-  Login,
-  UserPlus,
-  Shield,
+  // Login,
+  // UserPlus,
+  // Shield,
   Settings2,
   Category2,
   Package
@@ -62,24 +62,24 @@ const menus: MenuItem[] = [
     ],
     isOpen: false,
   },
-  {
-    icon: <Shield size={18} strokeWidth={2} />,
-    title: "Auth Pages",
-    link: "/users",
-    children: [
-      {
-        title: "Sign In",
-        link: "/auth/sign-in",
-        icon: <Login size={18} strokeWidth={2} />,
-      },
-      {
-        title: "Sign Up",
-        link: "/auth/sign-up",
-        icon: <UserPlus size={18} strokeWidth={2} />,
-      },
-    ],
-    isOpen: false,
-  },
+  // {
+  //   icon: <Shield size={18} strokeWidth={2} />,
+  //   title: "Auth Pages",
+  //   link: "/users",
+  //   children: [
+  //     {
+  //       title: "Sign In",
+  //       link: "/auth/sign-in",
+  //       icon: <Login size={18} strokeWidth={2} />,
+  //     },
+  //     {
+  //       title: "Sign Up",
+  //       link: "/auth/sign-up",
+  //       icon: <UserPlus size={18} strokeWidth={2} />,
+  //     },
+  //   ],
+  //   isOpen: false,
+  // },
   {
     icon: <Users size={18} strokeWidth={2} />,
     title: "Users",

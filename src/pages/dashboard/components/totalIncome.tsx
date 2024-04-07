@@ -6,7 +6,6 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
-  Tooltip,
   Legend,
   Bar,
 } from "recharts";
@@ -70,7 +69,7 @@ const TotalIncome: React.FC = () => {
           Overview
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent >
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />

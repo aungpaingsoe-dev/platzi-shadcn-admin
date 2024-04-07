@@ -1,37 +1,30 @@
-import useCookieStorage from "@/hooks/useCookieStorage";
 import { createSlice } from "@reduxjs/toolkit";
-
-type InitialStateType = {
-  user: Object | null | undefined;
+import { setCookie, removeCookie } from "typescript-cookie";
+ 
+export interface InitialStateType {
   token: string;
 };
 
 const initialState: InitialStateType = {
-  user: null,
   token: "",
 };
-
-const { saveData, removeData } = useCookieStorage();
 
 export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
     saveUserInfo: (state: InitialStateType, action) => {
-      const { user, token } = action.payload;
-      state.user = user;
+      const { token } = action.payload;
       state.token = token;
-      saveData("token", token);
-      saveData("user", user);
+      setCookie("token",token);
     },
     removeUserInfo: (state: InitialStateType) => {
-      (state.user = null), (state.token = ""), removeData("user");
-      removeData("token");
+      state.token = "";
+      removeCookie("token");
     },
   },
 });
 
 export const token = (state: InitialStateType) => state.token;
-export const user = (state: InitialStateType) => state.user;
 export const { saveUserInfo, removeUserInfo } = authSlice.actions;
 export default authSlice.reducer;

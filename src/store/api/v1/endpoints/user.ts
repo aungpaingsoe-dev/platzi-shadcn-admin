@@ -1,4 +1,3 @@
-import { ContactType } from "@/types";
 import { api } from "..";
 
 const userApi = api.injectEndpoints({
@@ -17,36 +16,7 @@ const userApi = api.injectEndpoints({
       }),
       providesTags: ["User"],
     }),
-    createUser: builder.mutation({
-      query: (body: ContactType) => ({
-        url: "/users",
-        method: "POST",
-        body,
-      }),
-      invalidatesTags: ["User"],
-    }),
-    updateUser: builder.mutation({
-      query: ({ id, body }) => ({
-        url: `/users/${id}`,
-        method: "PUT",
-        body,
-      }),
-      invalidatesTags: ["User"],
-    }),
-    deleteUser: builder.mutation({
-      query: (id) => ({
-        url: `/users/${id}`,
-        method: "DELETE",
-      }),
-      invalidatesTags: ["User"],
-    }),
   }),
 });
 
-export const {
-  useGetUsersQuery,
-  useGetUserQuery,
-  useCreateUserMutation,
-  useUpdateUserMutation,
-  useDeleteUserMutation,
-} = userApi;
+export const { useGetUsersQuery, useGetUserQuery } = userApi;

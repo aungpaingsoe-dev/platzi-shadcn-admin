@@ -11,7 +11,6 @@ import { BreadcrumbType } from "@/types";
 import React from "react";
 
 const Breadcrumbs = () => {
-  // Assuming breadCrumbs is an array of objects with title and href properties
   const breadCrumbs = useSelector((state: any) => state.app.breadCrumbs);
 
   return (

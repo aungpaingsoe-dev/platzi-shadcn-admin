@@ -6,6 +6,7 @@ export { default as SheetSideBar } from "@/components/common/sheet-sidebar";
 export { default as IconSideBar } from "@/components/common/icon-sidebar";
 export { default as Header } from "@/components/common/header";
 export { default as BreadCrumb } from "@/components/common/breadcrumb";
+export { default as MobileSideBar } from "@/components/common/mobile-sidebar";
 // Guard Components
 export { default as AuthGuard } from "@/components/guard/auth-guard";
 // Error Components
@@ -19,5 +20,6 @@ export { default as NotFoundLottie } from "@/components/lottie/not-found-error";
 export { default as ServerErrorLottie } from "@/components/lottie/server-error";
 export { default as NetworkErrorLottie } from "@/components/lottie/network-error";
 export { default as ErrorLottie } from "@/components/lottie/general-error";
+export { default as LoadingLottie } from "@/components/lottie/loading";
 // Tools
 export { default as ToggleMode } from "@/components/tools/toggle-mode";

@@ -9,17 +9,10 @@ import menusList from "@/services/data/menus";
 import { LetterI, ChevronUp, ChevronDown } from "tabler-icons-react";
 import { useLocation, useNavigate } from "react-router";
 import { SiPlatzi } from "react-icons/si";
-
-interface MenuItem {
-  title: string;
-  link?: string;
-  icon?: JSX.Element;
-  children?: MenuItem[];
-  isOpen?: boolean;
-}
+import { MenuItemType } from "@/types";
 
 const SheetSideBar: React.FC = () => {
-  const [menus, setMenus] = useState<MenuItem[]>(menusList);
+  const [menus, setMenus] = useState<MenuItemType[]>(menusList);
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
@@ -29,7 +22,7 @@ const SheetSideBar: React.FC = () => {
     setMenus(updatedMenus);
   };
 
-  const handleNavigate = (menus: MenuItem) => {
+  const handleNavigate = (menus: MenuItemType) => {
     navigate(`${menus.link}`);
   };
 
@@ -58,12 +51,12 @@ const SheetSideBar: React.FC = () => {
   }, []);
 
   return (
-    <Card className="w-60 fixed top-0 start-0 rounded-none overflow-y-auto ">
+    <Card className="  w-60 fixed top-0 start-0 rounded-none overflow-y-auto ">
       <CardContent className=" shadow-none m-0 p-0 focus-visible:outline-none">
         <div className="w-full h-screen overflow-y-auto rounded-none shadow-none border-e dark:border-foreground ">
           <div className="border-b dark:border-foreground dark:text-light py-5 w-full top-0 sticky shadow-sm ">
-            <div className="px-4 flex items-center gap-2 text-lg">
-              <SiPlatzi className=" text-xl " />
+            <div className="px-4 flex items-center gap-2 lg:text-lg">
+              <SiPlatzi className=" lg:text-xl " />
               Platzi + Shadcn Panel
             </div>
             <div className=" text-sm px-[44px] ">

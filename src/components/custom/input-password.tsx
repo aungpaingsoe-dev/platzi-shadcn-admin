@@ -1,20 +1,11 @@
+import React from "react";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { LuEye, LuEyeOff } from "react-icons/lu";
-import React, { ChangeEvent, FocusEvent } from "react";
+import { PasswordInputType } from "@/types";
 
-interface PasswordInputProps {
-  name: string;
-  id: string;
-  value: string;
-  onBlur: (event: FocusEvent<HTMLInputElement>) => void;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-  className? : string
-}
-
-const InputPassword: React.FC<PasswordInputProps> = (props) => {
+const InputPassword: React.FC<PasswordInputType> = (props) => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (

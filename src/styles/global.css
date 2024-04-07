@@ -5,18 +5,24 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply font-sans text-dark bg-light dark:text-light dark:bg-background;
-  }
-
   :root {
     --primary: #5396fb;
     --secondary: #8fd8fc;
     --danger: #ff204e;
     --background: #020617;
-    --foreground: #64748b;
+    --foreground: #1e293b;
     --dark: #020617;
     --light: #ffff;
+  }
+}
+
+@layer utilities {
+  body {
+    @apply font-sans text-dark bg-light dark:text-light dark:bg-background;
+  }
+
+  .toast-top-left {
+    @apply fixed top-2 left-2 z-[100] md:max-w-[420px];
   }
 
   .nav-link {
@@ -25,11 +31,5 @@
 
   .nav-active {
     @apply bg-slate-200 dark:bg-slate-800;
-  }
-}
-
-@layer utilities {
-  .toast-top-left {
-    @apply fixed top-2 left-2 z-[100] md:max-w-[420px];
   }
 }

@@ -23,8 +23,8 @@ const IconSidebar: React.FC = () => {
   const { pathname } = useLocation();
 
   return (
-    <Card className=" z-[2000] w-14 h-screen fixed top-0 start-0 flex justify-center overflow-y-auto rounded-none ">
-      <div className=" flex flex-col items-center ">
+    <Card className="hidden z-[2000] w-14 h-screen fixed top-0 start-0 lg:flex border-e-2 justify-center overflow-y-auto rounded-none ">
+      <div className=" flex flex-col items-center dark:text-light ">
         <div className=" border-b py-5 w-full top-0 sticky ">
           <div className=" px-4 flex items-center gap-2 text-lg ">
             <SiPlatzi />

@@ -11,9 +11,9 @@ const Account: React.FC = () => {
         preferences, and settings.
       </div>
       <hr className=" my-4 " />
-      <div className=" w-6/12 ">
-        <div className=" flex flex-wrap ">
-          <div className=" basis-1/2  p-1 ">
+      <div className=" lg:w-6/12 ">
+        <div className=" flex flex-col lg:flex-row flex-wrap ">
+          <div className=" basis-1/2 p-1 ">
             <Card className=" dark:text-light dark:border-foreground ">
               <CardHeader>
                 <div className=" flex  justify-between ">

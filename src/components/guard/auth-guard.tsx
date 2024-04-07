@@ -1,22 +1,19 @@
 import React, { useEffect } from "react";
-import useCookieStorage from "@/hooks/useCookieStorage";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeUserInfo, saveUserInfo } from "@/store/slice/auth";
 import { useLocation, useNavigate } from "react-router";
 import useNetworkDetect from "@/hooks/useNetworkDetect";
 import { NetworkError } from "@/components";
+import { getCookie } from "typescript-cookie";
+import { ChildrenType } from "@/types";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const AuthGuardComponent: React.FC<Props> = ({ children }) => {
+const AuthGuardComponent: React.FC<ChildrenType> = ({ children }) => {
+  const token = useSelector((state: any) => state?.auth?.token);
   const location = useLocation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { getData } = useCookieStorage();
   const { isOnline } = useNetworkDetect();
-  const isAuth = getData("token") && getData("user") ? true : false;
+  const isAuth = getCookie("token") ? true : false;
 
   // Checking Authentication
   const checkAuth = () => {
@@ -24,9 +21,7 @@ const AuthGuardComponent: React.FC<Props> = ({ children }) => {
       navigate("/auth/sign-in");
       dispatch(removeUserInfo());
     } else {
-      dispatch(
-        saveUserInfo({ user: getData("user"), token: getData("token") })
-      );
+      dispatch(saveUserInfo({ token: getCookie("token") }));
       // Redirect Back Home is Auth Layout
       if (
         location.pathname === "/auth/sign-in" ||
@@ -39,13 +34,9 @@ const AuthGuardComponent: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     checkAuth();
-  },[]);
+  }, [token]);
 
-  return <div>
-    {
-      isOnline ? children : <NetworkError/>
-    }
-  </div>;
+  return <div>{isOnline ? children : <NetworkError />}</div>;
 };
 
 export default AuthGuardComponent;
