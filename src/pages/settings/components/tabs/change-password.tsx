@@ -23,7 +23,7 @@ const ChangePassword: React.FC = () => {
         Update your account's security by modifying your current password to a
         new one.
       </div>
-      <hr className=" my-4 " />
+      <div className=" my-4 border dark:border-foreground " />
       <div className=" lg:w-5/12 ">
         <Formik
           initialValues={initialValues}

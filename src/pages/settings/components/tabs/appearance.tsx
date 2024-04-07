@@ -14,7 +14,7 @@ const Appearance: React.FC = () => {
           Customize your profile's visual presentation to suit your preferences
           and style.
         </div>
-        <hr className=" my-4 " />
+        <div className=" my-4 border dark:border-foreground " />
         <div className=" w-6/12 ">
           <div>
             <div>

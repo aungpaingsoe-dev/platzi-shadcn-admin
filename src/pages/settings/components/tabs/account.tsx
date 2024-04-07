@@ -10,7 +10,7 @@ const Account: React.FC = () => {
         Access and manage your personal information, including personal details,
         preferences, and settings.
       </div>
-      <hr className=" my-4 " />
+      <div className=" my-4 border dark:border-foreground " />
       <div className=" lg:w-6/12 ">
         <div className=" flex flex-col lg:flex-row flex-wrap ">
           <div className=" basis-1/2 p-1 ">
