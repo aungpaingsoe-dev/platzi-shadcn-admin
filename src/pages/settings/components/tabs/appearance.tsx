@@ -10,7 +10,7 @@ const Appearance: React.FC = () => {
     <div>
       <div>
         <div className=" text-xl ">Appearance</div>
-        <div className=" text-slate-500 mt-2 ">
+        <div className=" text-slat@/components/common/headere-500 mt-2 ">
           Customize your profile's visual presentation to suit your preferences
           and style.
         </div>

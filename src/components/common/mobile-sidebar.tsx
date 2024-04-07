@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { RiMenuUnfoldLine } from "react-icons/ri";
 import { SheetSideBar } from "@/components";
 import { useLocation } from "react-router";

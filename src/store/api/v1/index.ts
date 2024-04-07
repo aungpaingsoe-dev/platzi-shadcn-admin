@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { token } from "@/store/slice/auth";
+import { token } from "../../../store/slice/auth";
 
 export const api = createApi({
   reducerPath: "api",
