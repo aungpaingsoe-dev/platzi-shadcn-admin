@@ -11,6 +11,8 @@
 ## Demo Link
 
 https://admin-eight-eta-96.vercel.app
+https://platzi-shadcn-admin.netlify.app
+
 ## Features
 
 - Sign In
@@ -20,7 +22,7 @@ https://admin-eight-eta-96.vercel.app
 - Light & Dark Mode
 - Error Handling
 - Network Connection Check
-
+- Responsive Design
 
 
 
