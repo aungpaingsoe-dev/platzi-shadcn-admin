@@ -4,7 +4,7 @@
 
 ## Screenshots
 
-![App Screenshot](https://raw.githubusercontent.com/aungpaingsoe097238/platzi-shadcn-admin/main/public/app/dashboard.png)
+![App Screenshot](https://raw.githubusercontent.com/aungpaingsoe097238/platzi-shadcn-admin/main/public/app/dashboard-light.png)
 ![App Screenshot](https://raw.githubusercontent.com/aungpaingsoe097238/platzi-shadcn-admin/main/public/app/dashboard-dark.png)
 
 
