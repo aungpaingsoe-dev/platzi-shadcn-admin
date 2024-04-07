@@ -18,7 +18,7 @@ import { UserCircle2 } from "lucide-react";
 import { Logout, Settings2 } from "tabler-icons-react";
 import { removeUserInfo } from "@/store/slice/auth";
 
-const Header: React.FC = () => {
+const TopHeader: React.FC = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isSideBarOpen = useSelector((state: any) => state.app.isSideBarOpen);
@@ -91,4 +91,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default TopHeader;

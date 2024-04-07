@@ -4,7 +4,7 @@ export { default as InputPassword } from "@/components/custom/input-password";
 export { default as SideBar } from "@/components/common/sidebar";
 export { default as SheetSideBar } from "@/components/common/sheet-sidebar";
 export { default as IconSideBar } from "@/components/common/icon-sidebar";
-export { default as Header } from "@/components/common/header";
+export { default as TopHeader } from "@/components/common/top-header";
 export { default as BreadCrumb } from "@/components/common/breadcrumb";
 export { default as MobileSideBar } from "@/components/common/mobile-sidebar";
 // Guard Components

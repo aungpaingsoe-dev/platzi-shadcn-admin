@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { AuthGuard, Header, SideBar } from "@/components";
+import { AuthGuard, TopHeader, SideBar } from "@/components";
 import { useSelector } from "react-redux";
 
 const MainLayout: React.FC = () => {
@@ -16,7 +16,7 @@ const MainLayout: React.FC = () => {
             " w-full lg:px-5 px-2 " + (isSideBarOpen ? "lg:ms-60" : "lg:ms-14")
           }
         >
-          <Header />
+          <TopHeader />
           <div className=" mt-6 ">
             <Outlet />
           </div>
